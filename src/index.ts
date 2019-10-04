@@ -26,7 +26,7 @@ const processor = postcss(
 )
 
 
-const toCamelCase = ( str: string ) => str.replace(/_-+(\w)/g, ( _match, firstLetter: string ) => firstLetter.toUpperCase() )
+const toCamelCase = ( str: string ) => str.replace(/[_-]+(\w)/g, ( _match, firstLetter: string ) => firstLetter.toUpperCase() )
 // const getPath = ( outputDir: string, file: string ) => `${outputDir}/${file}.d.ts`
 
 const getDtsContent = async ( sassInclude: string[], includeIndexKey: boolean, path: string ) => {
